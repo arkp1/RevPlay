@@ -55,5 +55,4 @@ The application follows a **modular architecture** and is designed to be extende
 - 🔌 JDBC  
 - 🗄️ MySQL  
 - 🌱 Git  
-- 📜 Log4J  
 - 🧪 JUnit  
