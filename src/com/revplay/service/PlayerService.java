@@ -17,8 +17,7 @@ public class PlayerService {
        ENTRY METHOD — USER SEARCHES & SELECTS SONG
        ===================================================== */
     public void startPlayer(int userId, Scanner sc) {
-
-        System.out.print("Enter song name or artist keyword: ");
+   System.out.print("Enter song name or artist keyword: ");
         String keyword = sc.nextLine();
 
         List<Song> songs = songDAO.searchSongsForPlayback(keyword);
@@ -47,7 +46,7 @@ public class PlayerService {
                 selectedSong = s;
                 break;
             }
-        }
+         }
 
         if (selectedSong == null) {
             System.out.println("❌ Invalid selection.");
@@ -91,7 +90,6 @@ public class PlayerService {
             
             case 1:
                 if (musicPlayer == null) {
-                	System.out.println("DEBUG PATH: " + song.getFilepath());
 
                     musicPlayer = new MusicPlayer(song.getFilepath());
                     musicPlayer.play();

@@ -8,7 +8,6 @@ public class MusicService {
 
     private SongDAO songDAO = new SongDAO();
 
-    // UPLOAD SONG (CORRECT PARAMETER PASSING)
     public void uploadSong(int artistId,
                            Integer albumId,
                            String title,

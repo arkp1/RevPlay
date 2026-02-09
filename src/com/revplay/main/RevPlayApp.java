@@ -1,9 +1,13 @@
 	package com.revplay.main;
 	
 	import java.util.Scanner;
+	import com.revplay.service.ListeningHistoryService;
+	import com.revplay.model.ListeningHistory;
+	import java.util.List;
+
 	
-	import com.revplay.model.UserType;
-	import com.revplay.service.*;
+import com.revplay.model.UserType;
+import com.revplay.service.*;
 import com.revplay.util.ValidationUtil;
 	
 	public class RevPlayApp {
@@ -38,6 +42,7 @@ import com.revplay.util.ValidationUtil;
 	        SearchService searchService = new SearchService();
 	        PlayerService playerService = new PlayerService();
 	        PlaylistService playlistService = new PlaylistService();
+	        ListeningHistoryService listeningHistoryService = new ListeningHistoryService();
 	
 	        // Artist services
 	        MusicService musicService = new MusicService();
@@ -56,8 +61,11 @@ import com.revplay.util.ValidationUtil;
 	            /* ================= BEFORE LOGIN ================= */
 	            if (!isLoggedIn) {
 	
-	                System.out.println("\n█▀█ █▀▀ █ █ █▀█ █   ▄▀█ █▄█\n"
-	                		+ 			 "█▀▄ ██▄ ▀▄▀ █▀▀ █▄▄ █▀█  █");
+	                System.out.println("\n██████╗ ███████╗██╗   ██╗██████╗ ██╗      █████╗ ██╗   ██╗\n"
+	                					+"██╔══██╗██╔════╝██║   ██║██╔══██╗██║     ██╔══██╗╚██╗ ██╔╝\n"
+	                					+"██████╔╝█████╗  ██║   ██║██████╔╝██║     ███████║ ╚████╔╝\n"
+	                					+"██║  ██║███████╗ ╚████╔╝ ██║     ███████╗██║  ██║   ██║\n"
+	                					+"╚═╝  ╚═╝╚══════╝  ╚═══╝  ╚═╝     ╚══════╝╚═╝  ╚═╝   ╚═╝\n");
 	                System.out.println("1. Register");
 	                System.out.println("2. Login");
 	                System.out.println("3. Forgot Password");
@@ -200,10 +208,10 @@ import com.revplay.util.ValidationUtil;
 	                    System.out.println("3. Play Song");
 	                    System.out.println("4. Create Playlist");
 	                    System.out.println("5. Manage My Playlists");
-	                    System.out.println("6. Logout");
+	                    System.out.println("6. View My Listening History");
+	                    System.out.println("7. Logout");
 	                    System.out.print("Choose option: ");
-	//
-	//                    int choice = getIntInput(sc);
+
 	                    int choice = sc.nextInt();
 	                    sc.nextLine();
 	
@@ -232,8 +240,32 @@ import com.revplay.util.ValidationUtil;
 	                        case 5:
 	                            playlistService.managePlaylists(loggedInUserId, sc);
 	                            break;
-	
+	                        
 	                        case 6:
+	                            List<ListeningHistory> history =
+	                                    listeningHistoryService.viewHistory(loggedInUserId);
+
+	                            if (history.isEmpty()) {
+	                                System.out.println("No listening history found.");
+	                            } else {
+	                                System.out.println("\n===== MY LISTENING HISTORY =====");
+	                                System.out.printf("%-5s %-25s %-20s %-20s%n",
+	                                        "ID", "Song", "Artist", "Played At");
+	                                System.out.println("---------------------------------------------------------------");
+
+	                                for (ListeningHistory h : history) {
+	                                    System.out.printf("%-5d %-25s %-20s %-20s%n",
+	                                            h.getHistoryId(),
+	                                            h.getSongTitle(),
+	                                            h.getArtistName(),
+	                                            h.getListenedAt()
+	                                    );
+	                                }
+	                            }
+	                            break;
+
+	
+	                        case 7:
 	                            isLoggedIn = false;
 	                            loggedInType = null;
 	                            loggedInUserId = null;

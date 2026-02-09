@@ -19,7 +19,7 @@ public class SearchService {
         displayResults(songs);
     }
 
-    // ✅ USER-side browse (by name, not ID)
+    // USER-side browse (by name, not ID)
     public void browseAlbumsByArtist(String artistName) {
         List<String> albums =
                 albumDAO.getAlbumsByArtistName(artistName);
