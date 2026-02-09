@@ -11,7 +11,7 @@ The application follows a **modular architecture** and is designed to be extende
 ### 👤 User Features
 - 📝 Register and create an account  
 - 🔐 Login to account  
-- 🔎 Search songs, artists, playlists, podcasts, and albums by keywords  
+- 🔎 Search songs, artists, playlists, and albums by keywords  
 - 🗂️ Browse content by category (genre, artist, album)  
 - ⭐ Mark songs as favorites  
 - ❤️ View favorite songs  
