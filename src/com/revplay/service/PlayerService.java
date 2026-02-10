@@ -122,43 +122,6 @@ public class PlayerService {
                 
             case 5: 
             	return;
-            	
-
-
-//                case 1:
-//                    System.out.println("▶ Playing...");
-//                    System.out.println("\n🎵 Now Playing: "
-//                            + song.getTitle()
-//                            + " | "
-//                            + song.getArtistName());
-//                    break;
-//
-//                case 2:
-//                    System.out.println("⏸ Paused");
-//                    System.out.println("\n⏸ Paused: "
-//                            + song.getTitle()
-//                            + " | "
-//                            + song.getArtistName());
-//                    playing = false;
-//                    break;
-//
-//                case 3:
-//                    System.out.println("⏭ Skipped (simulated)");
-//                    System.out.println("\n⏭ Skipped "
-//                            + song.getTitle()
-//                            + " | "
-//                            + song.getArtistName());
-//                    playing = false;
-//                    break;
-//
-//                case 4:
-//                    System.out.println("🔁 Repeating");
-//                    System.out.println("\n🔁 Repeating: "
-//                            + song.getTitle()
-//                            + " | "
-//                            + song.getArtistName());
-//                    
-//                    break;
 
                 default:
                     System.out.println("❌ Invalid choice!");
