@@ -86,9 +86,19 @@ import com.revplay.util.ValidationUtil;
 	
 	                        System.out.print("Email: ");
 	                        String email = sc.nextLine();
+	                        if(!ValidationUtil.isValidEmail(email)) {
+	                        	System.out.println("Invalid Mail format!");
+	                        	return;
+	                        }
 	
 	                        System.out.print("Password: ");
 	                        String password = sc.nextLine();
+	                        
+	                        if(!ValidationUtil.isStrongPassword(password)) {
+	                        	System.out.println("❌ Password must contain least 8 characters, 1 uppercase letter, 1 lowercase letter, 1 digit, 1 special character!");
+	                        	return;
+	                        }
+	                       	                        
 	                        
 	                        System.out.println("Choose a security question:");
 	                        System.out.println("1. What is your favorite color?");
@@ -156,7 +166,7 @@ import com.revplay.util.ValidationUtil;
 	                        	    securityAnswer
 	                        	);
 	
-	                        	//System.out.println("✅ Registration successful!"); 
+	                       
 	                        	break;
 	
 	
