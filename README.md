@@ -49,11 +49,7 @@ The application follows a **modular architecture** and is designed to be extende
 ---
 
 ## Application UML diagram
-[](Docs/ERD_Image.png)
-
-## 🔑 Standard Functional Scope
-- Registered users (listeners & artists) can:
-  - 🔐 Login  
+![](/Docs/ERD_Image.png)
   - 🔄 Change password  
   - ❓ Recover forgotten password using security questions 
 
