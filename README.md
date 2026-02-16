@@ -46,7 +46,79 @@ The application follows a **modular architecture** and is designed to be extende
 
 
 ## Folder Structure [to be added]
+com.revplay
+├── dao          # Data Access Objects (DB interactions)
+├── model        # POJOs (User, Song, Artist, etc.)
+├── service      # Business Logic (Player, Auth, Song Management)
+├── ui           # Console Interface (Menus, Input Handling)
+└── util         # Untilites (DBConnection, InputValidator)
 
+---
+
+## Application Architecture Diagram
+
++-----------------------------------------------------------+
+|                    PRESENTATION LAYER                     |
+|-----------------------------------------------------------|
+|  RevPlayApp (Entry Point)                                 |
++-------------------------------+---------------------------+
+                                |
+                                v
++-----------------------------------------------------------+
+|                    SERVICE LAYER                          |
+|-----------------------------------------------------------|
+|  AuthService                                              |
+|  UserService                                              |
+|  MusicService                                             |
+|  PlaylistService                                          |
+|  SearchService                                            |
+|  PlayerService                                            |
+|  ArtistService                                            |
+|  ListeningHistoryService                                  |
++-------------------------------+---------------------------+
+                                |
+                                v
++-----------------------------------------------------------+
+|                      DAO LAYER                            |
+|-----------------------------------------------------------|
+|  UserDAO                                                  |
+|  SongDAO                                                  |
+|  AlbumDAO                                                 |
+|  ArtistDAO                                                |
+|  PlaylistDAO                                              |
+|  ListeningHistoryDAO                                      |
++-------------------------------+---------------------------+
+                                |
+                                v
++-----------------------------------------------------------+
+|                      DATABASE                             |
+|-----------------------------------------------------------|
+|  MySQL                                                    |
++-----------------------------------------------------------+
+
+
++-----------------------------------------------------------+
+|                      MODEL LAYER                          |
+|-----------------------------------------------------------|
+|  User                                                     |
+|  Artist                                                   |
+|  Album                                                    |
+|  Song                                                     |
+|  ListeningHistory                                         |
+|  UserType (Enum)                                          |
++-----------------------------------------------------------+
+
+
+                 (Cross-Cutting Utility Layer)
+
++-----------------------------------------------------------+
+|                      UTILITY LAYER                        |
+|-----------------------------------------------------------|
+|  DBConnection                                             |
+|  HashPasswordUtil                                         |
+|  ValidationUtil                                           |
+|  MusicPlayer                                              |
++-----------------------------------------------------------+
 
 ---
 
