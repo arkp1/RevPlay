@@ -129,6 +129,104 @@ RevPlay
 
 
 ---
+## ⚙️ Project Setup
+
+### 1. Prerequisites
+
+- Java 17+
+- MySQL 8+
+- MySQL Connector J
+- IntelliJ / Eclipse / VS Code
+
+---
+
+### 2. Clone Repository
+
+```bash
+git clone https://github.com/arkp1/RevPlay.git
+cd RevPlay
+```
+
+---
+
+### 3. Create Database
+
+```sql
+CREATE DATABASE revplay;
+USE revplay;
+```
+
+Create required tables for:
+
+- User
+- Artist
+- Album
+- Song
+- Playlist
+- ListeningHistory
+
+---
+
+### 4. Configure Database Connection
+
+Open:
+
+```
+src/com/revplay/util/DBConnection.java
+```
+
+Update credentials:
+
+```java
+private static final String URL = "jdbc:mysql://localhost:3306/revplay";
+private static final String USER = "your_username";
+private static final String PASSWORD = "your_password";
+```
+
+---
+
+### 5. Add MySQL Connector
+
+Place the MySQL connector JAR inside:
+
+```
+lib/
+```
+
+Add it to your project build path.
+
+---
+
+### 6. Compile & Run
+
+From IDE:
+
+Run:
+
+```
+RevPlayApp.java
+```
+
+OR from terminal (Windows):
+
+```bash
+javac -cp "lib/*" -d bin src/com/revplay/**/*.java
+java -cp "bin;lib/*" com.revplay.main.RevPlayApp
+```
+
+(macOS/Linux use `:` instead of `;`)
+
+---
+
+## 🚀 Application Flow
+
+1. Start application  
+2. Register / Login as Artist or User
+3. Browse or Search Songs  
+4. Play Music  
+5. Manage Playlists  
+6. Track Listening History  
+---
 
 ## 🛠️ Technologies Used
 - ☕ Java  
