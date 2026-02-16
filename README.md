@@ -42,6 +42,12 @@ The application follows a **modular architecture** and is designed to be extende
 
 ---
 
+
+## Folder Structure [to be added]
+
+
+---
+
 ## 🔑 Standard Functional Scope
 - Registered users (listeners & artists) can:
   - 🔐 Login  
