@@ -38,7 +38,9 @@ The application follows a **modular architecture** and is designed to be extende
 - ✏️ Update song/album information  
 - 🗑️ Delete songs and albums  
 - 📈 View play count and song statistics  
-- ⭐ See users who added songs to favorites  
+- ⭐ See users who added songs to favorites
+- 🔄 Change password  
+- ❓ Recover forgotten password using security questions  
 
 ---
 
@@ -50,8 +52,7 @@ The application follows a **modular architecture** and is designed to be extende
 
 ## Application UML diagram
 ![](/Docs/ERD_Image.png)
-  - 🔄 Change password  
-  - ❓ Recover forgotten password using security questions 
+
 
 ---
 
