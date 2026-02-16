@@ -233,4 +233,3 @@ java -cp "bin;lib/*" com.revplay.main.RevPlayApp
 - 🔌 JDBC  
 - 🗄️ MySQL  
 - 🌱 Git  
-- 🧪 JUnit  
