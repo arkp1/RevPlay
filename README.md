@@ -48,6 +48,9 @@ The application follows a **modular architecture** and is designed to be extende
 
 ---
 
+## Application UML diagram
+[]()
+
 ## 🔑 Standard Functional Scope
 - Registered users (listeners & artists) can:
   - 🔐 Login  
